@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+   name: clustergeneratorappsetlw
+   namespace: argocd
+spec:
+  generators:
+  - clusters: {}
+  template:
+    metadata:
+      name: '{{name}}-application'
+    spec:
+      project: default
+      destination:
+         server: '{{server}}'
+         namespace: default
+      source:
+        repoURL: https://github.com/KabraJiii/multienv-argocd-session-7.git
+        path: prod-cluster
+        targetRevision: main
+
