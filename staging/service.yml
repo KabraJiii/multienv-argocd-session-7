@@ -8,9 +8,9 @@ metadata:
     name: lwweb
 spec:
   ports:
-  - port: 81
+  - port: 80
     protocol: TCP
-    targetPort: 81
+    targetPort: 80
   selector:
     app: lwweb
     type: LoadBalancer
