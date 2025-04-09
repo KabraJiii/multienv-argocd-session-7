@@ -15,7 +15,6 @@ spec:
          server: '{{server}}'
          namespace: default
       source:
-        repoURL: https://github.com/KabraJiii/multienv-argocd-session-7.git
-        path: prod-cluster
-        targetRevision: main
-
+        repoURL:  https://github.com/vimallinuxworld13/argocd_training_2024_code.git
+        path: multienv/prod-cluster
+        targetRevision: master
