@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: lwwebappprod
+  name: lwwebappstaging
 spec:
   project: default
   destination:
-    server: https://192.168.67.2:8443
+    server: https://192.168.233.129:8443
     namespace: default
   source:
     repoURL: https://github.com/KabraJiii/multienv-argocd-session-7.git
-    path: prod
+    path: staging
     targetRevision: main
